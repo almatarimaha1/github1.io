@@ -1,0 +1,292 @@
+<!DOCTYPE.html>
+
+<html>
+    <head>
+        <title>
+             for lack of a better name
+        </title>
+        <style>
+            body { background: linear-gradient(to bottom, #000000 0%, #106F80 1000%);
+            width: 100%;
+            }
+
+            #bodyy {
+                opacity: .5;
+                filter: alpha(opacity=50);
+                background: red;
+                width: 100%;
+
+            }
+
+            #deadmau5 {
+                color: white;
+                text-align: center;
+                font-size: 100px;
+                font-family: arial black, bold;
+                letter-spacing: -10px;
+                display: block;
+                clear: both;
+                margin-bottom: 10px;
+            }
+
+            #forlack {
+                margin-left: 140px;
+                color: #2AABB4;
+                display: block;
+                font-size: 30px;
+                font-family: arial black, bold;
+                letter-spacing: -3px;
+                clear: both;
+            }
+
+            #demo {
+                color: white;
+            }
+
+            @-webkit-keyframes swing
+        {
+        15%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-5px);
+           transform: translateX(-5px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+    @keyframes swing
+        {
+        15%
+        {
+        -webkit-transform: translateX(7px);
+        transform: translateX(7px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+
+        #deadmau5:hover
+        {
+            -webkit-animation: swing 5s ease;
+            animation: swing 1s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+
+        .songs {
+
+            float: left;
+            margin: 80px;
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            border-top: 3px solid white;
+            border-bottom: 6px solid #054D52;
+            padding: 5px;
+
+            font-family: arial black, bold;
+            font-size: 28px;
+            color: white;
+            display: inline-block
+
+            -webkit-transition: all .1s ease-in-out;
+        }
+
+         .songs:hover{
+             -webkit-transform: scale(1.1);
+
+             border-top: solid #00838B;
+             border-bottom: double white;
+             border-width: 3px;
+             padding: 5px;
+             background: linear-gradient(to bottom, #000000 0%, #106F80 500%);
+             filter: contrast(200%);
+
+         }
+
+         audio {
+            border-top: 3px solid #8E8E8E;
+            border-bottom: 4px solid #023A3E;
+            border-radius: 12px;
+            cursor: pointer;
+         }
+
+          #buttons {
+
+             float: left;
+             width: 100%;
+             position: fixed;
+             top: 0;
+          }
+
+         .button {
+            margin-left: 80px;
+            background-color: #265157;
+            padding: 10px 25px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+         }
+
+         .wordbutton {
+
+            color: white;
+            font-size: 25px;
+            font-family: arial black, bold;
+            letter-spacing: -1px;
+            display: inline-block;
+         }
+
+         .button:hover {
+            background-color: #006368;
+            padding: 10px 100px;
+         }
+
+        </style>
+        </head>
+        <body>
+        <br><br><br><br><br><br><br>
+        <div id = "bodyy"></div>
+        <div id = "deadmau5">deadmau5
+        <div id = "forlack">for lack of a better name</div>
+        </div>
+        </div><br>
+        <div id="demo"></div>
+        <div id="text"></div>
+
+        <script>
+        let songs = [
+            {
+                name: "FML <br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/da/be/14/dabe1448-ca86-e5a3-8a0b-ad62cd12fc2b/mzaf_1073199083998648316.plus.aac.p.m4a",
+            },
+
+            {
+                name: "moar ghosts 'n' stuff <br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/f9/52/37/f95237ba-8382-0831-3d64-ad9b6c5b7c6f/mzaf_2155439048243601758.plus.aac.p.m4a",
+
+            },
+
+            {
+               name: "ghosts 'n' stuff <br>",
+               preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/54/05/2b/54052b8b-41c0-7ca7-360e-34f0574b0ebb/mzaf_6786984614277143417.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "hi friend!<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/65/74/e8/6574e8b8-c41b-8368-9143-90b2f776e13d/mzaf_3788138958501532724.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "bot<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/v4/e8/26/7b/e8267b3a-09ac-8626-0d4f-8ebc97aaeea8/mzaf_3929124972253842347.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "word problems<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/0c/dc/30/0cdc302e-a0de-e24d-75f6-8ef022bd4d67/mzaf_3680432039180291764.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "soma<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/40/c5/4d/40c54d6e-4d6c-4813-4e93-709068b46dd7/mzaf_7927449356063606229.plus.aac.p.m4a",
+            },
+
+            {
+                name: "lack of a better name<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/v4/2c/25/f2/2c25f2c4-a830-da08-aa60-4d60192ccefb/mzaf_2066192893338598983.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "the 16th hour<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/eb/1d/54/eb1d5498-b077-a2e6-6fbc-436dee9ec479/mzaf_7286051689497909130.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "strobe<br>(best song)",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/77/cf/f1/77cff1cd-5fa6-6490-ccbc-6b8b49ac7b75/mzaf_8541350558552834580.plus.aac.p.m4a",
+            }]
+
+        let text = "";
+        let i;
+
+        for(i = 0; i < songs.length; i++) {
+
+             text += "<div class = 'songs'><img alt = 'lackmau5' src = '../ForLack/lackofa.png' width = '200px'/><br>" + songs[i].name + "<br>" + "</a><img class='space' src=" + "><audio controls style='width: 200px' style='height: 20px'><source src="+ songs[i].preview +" type= 'audio/mp4'/></audio></div>"
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        <br><br>
+
+        <div id = "buttons">
+
+        <a href="../index.html"><div class = "button"><div class = "wordbutton">main menu</div></div></a>
+        <a href="https://itunes.apple.com/us/album/for-lack-of-a-better-name-bonus-track-version/331538362"><div class = "button"><div class = "wordbutton">itunes</div></div></a>
+        <a href="http://live.deadmau5.com"><div class = "button"><div class = "wordbutton">website</div></div></a>
+        </div>
+        <br><br><br><br>
+        </body>
+
+
+
+
+            <!--//itunes.apple.com/search?term=bots+deadmau5&media=music&entity=song&limit=1-->
+
+
+
+
+
+

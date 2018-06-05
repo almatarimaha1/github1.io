@@ -1,0 +1,277 @@
+<!DOCTYPE.html>
+
+<html>
+    <head>
+        <title>
+             >album title goes here<
+        </title>
+        <style>
+            body { background: #020605; width: 100%; }
+
+            #bodyy {
+                opacity: .5;
+                filter: alpha(opacity=50);
+                background: red;
+                width: 100%;
+            }
+
+            #deadmau5 {
+                color: white;
+                text-align: center;
+                font-size: 90px;
+                font-family: arial black, bold;
+                letter-spacing: -11px;
+                display: block;
+                clear: both;
+                margin-bottom: 10px;
+                background: black;
+                border-bottom: #3F7667 double 2px;
+                border-top: #3F7667 outset 2px; ;
+                padding-bottom: 35px;
+                padding-top: 10px;
+            }
+
+            #albumTitle {
+                text-align: center;
+                color: #5E9288;
+                display: block;
+                font-size: 40px;
+                font-family: arial black, bold;
+                letter-spacing: -3px;
+                clear: both;
+            }
+
+            #demo {
+                color: white;
+            }
+
+            @-webkit-keyframes swing
+        {
+        15%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-5px);
+           transform: translateX(-5px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+    @keyframes swing
+        {
+        15%
+        {
+        -webkit-transform: translateX(7px);
+        transform: translateX(7px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+
+        #deadmau5:hover
+        {
+            -webkit-animation: swing 3s ease;
+            animation: swing 1s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+
+        .songs {
+            float: left;
+            margin: 80px;
+            margin-top: 50px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            font-family: arial black, bold;
+            font-size: 26px;
+            color: white;
+            display: inline-block
+
+            -webkit-transition: all .1s ease-in-out;
+        }
+
+         .songs:hover{
+             -webkit-transform: scale(1.2);
+             color: #DCE7E4;
+             filter: contrast(1.1);
+             background: black;
+         }
+
+         audio {
+            border-top: 3px solid #8E8E8E;
+            border-bottom: 4px solid #023A3E;
+            border-radius: 12px;
+            cursor: pointer;
+         }
+
+          #buttons {
+
+             float: left;
+             width: 100%;
+             position: fixed;
+             top: 0;
+          }
+
+         .button {
+            margin-left: 80px;
+            /*background-color: #548077;*/
+            padding: 10px 25px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            background: linear-gradient(to top, black, #7BB4A9, black)
+          }
+
+         .button:hover {
+            color: black;
+            background: linear-gradient(to bottom, black, #3D6A61, #7BB4A9, black)
+         }
+
+         .wordbutton {
+            color: white;
+            font-size: 25px;
+            font-family: arial black, bold;
+            letter-spacing: -1px;
+            display: inline-block;
+         }
+        </style>
+        </head>
+        <body>
+        <br><br><br><br><br><br><br>
+        <div id = "bodyy"></div>
+        <div id = "deadmau5">deadmau5
+        <div id = "albumTitle">>album title goes here<</div>
+        </div>
+        </div><br>
+        <div id="demo"></div>
+        <div id="text"></div>
+
+        <script>
+        let songs = [
+            {
+                name: "superliminal <br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/88/6c/86/mzi.caonicdm.aac.p.m4a"
+            },
+
+            {
+                name: "channel 42<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/5e/94/d4/mzi.dgvxohmh.aac.p.m4a"
+            },
+
+            {
+               name: "the veldt <br>",
+               preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/35/17/9a/mzi.dcasevon.aac.p.m4a"
+
+            },
+
+            {
+                name: "fn pig<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/bf/ba/4f/mzi.dusvbnzt.aac.p.m4a"
+            },
+
+            {
+                name: "professional <br>griefers",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/ec/8b/a7/mzi.lomjvqtq.aac.p.m4a"
+            },
+
+            {
+                name: "maths<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/35/bc/73/mzi.bmghsoje.aac.p.m4a"
+            },
+
+            {
+                name: "there might <br>be coffee",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/da/f7/f6/mzi.cgazggup.aac.p.m4a"
+            },
+
+            {
+                name: "take care of the <br>proper paperwork",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/a1/6f/7c/mzi.zbgxothq.aac.p.m4a"
+            },
+
+            {
+                name: "closer<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/87/20/36/mzi.simawpbe.aac.p.m4a"
+            },
+
+            {
+                name: "october<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/4e/85/d0/mzi.ncbfylfo.aac.p.m4a"
+            },
+
+            {
+                name: "sleepless<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/fd/da/6f/mzi.wsgeweri.aac.p.m4a"
+
+            },
+
+            {
+                name: "failbait<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/e1/3d/c0/mzi.sqcssnkb.aac.p.m4a"
+            }]
+
+        let text = "";
+        let i;
+
+        for(i = 0; i < songs.length; i++) {
+
+             text += "<div class = 'songs'><img alt = 'lackmau5' src = '../albumTitle/albumtitlee.png' width = '185px'/><br>" + songs[i].name + "<br>" + "</a><img class='space' src=" + "><audio controls style='width: 200px' style='height: 20px'><source src="+ songs[i].preview +" type= 'audio/mp4'/></audio></div>"
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        <br><br>
+
+        <div id = "buttons">
+
+        <a href="../index.html"><div class = "button"><div class = "wordbutton">main menu</div></div></a>
+        <a href="https://itunes.apple.com/us/album/album-title-goes-here/561758043"><div class = "button"><div class = "wordbutton">itunes</div></div></a>
+        <a href="http://live.deadmau5.com"><div class = "button"><div class = "wordbutton">website</div></div></a>
+        </div>
+        <br><br><br><br>
+        </body>

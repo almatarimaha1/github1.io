@@ -1,0 +1,278 @@
+<!DOCTYPE.html>
+
+<html>
+    <head>
+        <title>Random Album Title</title>
+        <link rel="stylesheet" href="animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300" rel="stylesheet">
+        <style  type = "text/css">
+
+            body { background: linear-gradient(to bottom, #000000 0%, #ff3300 750%);  width:100%;}
+
+            #heading {
+                float: inherit;
+                padding: 20px;
+                width: 100%;
+                margin: 0px 0px 0px 0px;
+                text-align: center;
+                color: white;
+            }
+
+             .animated {
+                color: white;
+                font-family: arial black, bold;
+                font-size: 85px;
+                letter-spacing: -10px;
+             }
+
+            #bloc2 {
+                font-size: 35px;
+                letter-spacing: 5px;
+                font-family: 'Yanone Kaffeesatz', sans-serif;
+                text-align: center;
+            }
+
+            #demo {
+                color: white;
+            }
+
+            @-webkit-keyframes swing
+        {
+        15%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-5px);
+           transform: translateX(-5px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+    @keyframes swing
+        {
+        15%
+        {
+        -webkit-transform: translateX(7px);
+        transform: translateX(7px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+
+        #heading:hover
+        {
+            -webkit-animation: swing 5s ease;
+            animation: swing 1s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+
+        .songs {
+
+            float: left;
+            margin: 80px;
+            margin-top: 50px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            border-top: 3px solid white;
+            border-bottom: 6px solid #560505;
+            padding: 5px;
+
+            font-family: arial black, bold;
+            font-size: 23px;
+            color: white;
+            display: inline-block
+
+
+            -webkit-transition: all .1s ease-in-out;
+        }
+
+         .songs:hover{
+             -webkit-transform: scale(1.1);
+             border: dashed white;
+             padding: 5px;
+         }
+
+         audio {
+            border-top: 3px solid #8E8E8E;
+            border-bottom: 4px solid #780D0D;
+            border-radius: 12px;
+            cursor: pointer;
+         }
+
+          #buttons {
+
+             float: left;
+             width: 100%;
+             position: fixed;
+             top: 0;
+          }
+
+         .button {
+            margin-left: 80px;
+            border: solid white`;
+            background-color: #9C0000;
+            padding: 10px 25px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+         }
+
+         .wordbutton {
+
+            color: white;
+            font-size: 25px;
+            font-family: arial black, bold;
+            letter-spacing: -1px;
+            display: inline-block;
+         }
+
+         .button:hover {
+            background-color: red;
+            padding: 10px 100px;
+         }
+        </style>
+    </head>
+        <body>
+        <br><br><br><br>
+        <div id = "heading">
+        <div class = "animated bounce">deadmau5</div>
+        <div id = "bloc2">RANDOM ALBUM TITLE</div>
+        </div><br>
+        <div id="demo"></div>
+        <div id="text"></div>
+
+        <script>
+        let songs = [
+            {
+
+                name: "sometimes things<br>get, whatever",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/3c/11/ad/3c11adec-d54e-d027-1d8b-93a28aac4d77/mzaf_3623066573509678739.plus.aac.p.m4a"
+            },
+
+            {
+                name: "complications<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/77/cd/82/77cd823f-0708-c441-94f0-fed64da4dac8/mzaf_2860583773053635194.plus.aac.p.m4a"
+            },
+
+            {
+               name: "slip<br>",
+               preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/65/de/65/65de65ba-bdb8-29de-5c57-5b6cc4e38758/mzaf_4605149634058771371.plus.aac.p.m4a",
+            },
+
+            {
+                name: "some kind of blue<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/ca/6b/96/ca6b9693-f712-c32d-3a9b-2bb55df5a453/mzaf_6565636599307924678.plus.aac.p.m4a",
+            },
+
+            {
+                name: "brazil (2nd edit)<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/v4/c9/7e/3a/c97e3a4a-84d6-fe59-fea1-f1d1fd63eda5/mzaf_6278141279323758781.plus.aac.p.m4a",
+            },
+
+            {
+                name: "alone with you<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/v4/20/c9/8a/20c98aba-d8c9-73a7-9fdc-81982b699f41/mzaf_2155996625461893546.plus.aac.p.m4a",
+            },
+
+            {
+                name: "i remember<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/31/6c/ab/316cab1d-20f9-799e-4985-741c0eac61a9/mzaf_3152143458269639501.plus.aac.p.m4a",
+            },
+
+            {
+                name: "faxing berlin <br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/v4/46/53/4c/46534c4d-64ab-3093-f191-ae2ae3ac6c7a/mzaf_6057869943469139544.plus.aac.p.m4a",
+            },
+
+            {
+                name: "faxing berlin<br> (piano version)",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/82/34/6c/82346c66-9569-fd84-9945-0900530cf723/mzaf_1221869556764733854.plus.aac.p.m4a",
+            },
+
+            {
+                name: "not exactly<br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/92/74/5c/92745c81-06f6-c933-ab7c-9f7a5c549b2d/mzaf_5461339919425624086.plus.aac.p.m4a",
+            },
+
+            {
+                name: "arguru <br>",
+                preview: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/v4/12/2d/71/122d7110-937a-2e81-4338-a33c6a25552a/mzaf_5371206096254903318.plus.aac.p.m4a",
+
+            },
+
+            {
+                name: "so there i was <br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music2/v4/4d/dd/9a/4ddd9a23-c105-a0bb-cc72-49be0170830a/mzaf_754415471956952704.plus.aac.p.m4a",
+
+            }]
+
+
+
+        // let x = "RandomPics/mau5red.png"
+
+        let text = "";
+        let i;
+
+        for(i = 0; i < songs.length; i++) {
+
+             text += "<div class = 'songs'><img alt = 'redmau5' src = '../RandomPics/mau5red.png' width = '170px'/><br>" + songs[i].name + "<br>" + "</a><img class='space' src=" + "><audio controls style='width: 200px' style='height: 20px'><source src="+ songs[i].preview +" type= 'audio/mp4'/></audio></div>"
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        <br><br>
+
+        <div id = "buttons">
+
+        <a href="../index.html"><div class = "button"><div class = "wordbutton">main menu</div></div></a>
+        <a href="https://itunes.apple.com/us/album/random-album-title/290435378"><div class = "button"><div class = "wordbutton">itunes</div></div></a>
+        <a href="http://live.deadmau5.com"><div class = "button"><div class = "wordbutton">website</div></div></a>
+        </div>
+        <br><br><br><br>
+        </body>

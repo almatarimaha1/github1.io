@@ -1,0 +1,277 @@
+<!DOCTYPE.html>
+
+<html>
+    <head>
+        <title>W:/2016ALBUM/</title>
+        <style  type = "text/css">
+
+        body { background:black;  width:100%;}
+
+        #title {
+            font-family: arial black, bold;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        #bloc1 {
+            width: 100%;
+            color: white;
+            font-size: 40px;
+            letter-spacing: -7px;
+            font-size: 73px;
+            display: inline;
+        }
+
+        #bloc2 {
+            color: red;
+            font-size: 65px;
+            display: inline;
+            letter-spacing: -5px;
+        }
+
+        #demo {
+            color: white;
+        }
+
+            @-webkit-keyframes swing
+        {
+        15%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-5px);
+           transform: translateX(-5px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+        @keyframes swing
+        {
+        15%
+        {
+        -webkit-transform: translateX(7px);
+        transform: translateX(7px);
+        }
+        30%
+        {
+            -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+        }
+        50%
+        {
+            -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+        65%
+        {
+            -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+        }
+        80%
+        {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+        100%
+        {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        }
+
+        #title:hover
+        {
+            -webkit-animation: swing 5s ease;
+            animation: swing 1s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+
+        .songs {
+            float: left;
+            margin: 80px;
+            margin-top: 50px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            font-family: arial black, bold;
+            font-size: 25px;
+            color: white;
+            display: inline-block
+            filter: contrast(250%);
+
+            -webkit-transition: all .1s ease-in-out;
+        }
+
+         .songs:hover{
+             -webkit-transform: scale(1.1);
+             filter: contrast(150%);
+         }
+
+         audio {
+            border-top: 3px solid #8E8E8E;
+            border-bottom: 4px solid #780D0D;
+            border-radius: 12px;
+            cursor: pointer;
+         }
+
+          #buttons {
+             float: left;
+             width: 100%;
+             position: fixed;
+             top: 0;
+          }
+
+         .button {
+            margin-left: 80px;
+            border: solid red 6px;
+            border-radius: 0px  0px 20px 20px;
+            background-color: black;
+            padding: 10px 25px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.6)
+         }
+
+         .wordbutton {
+            color: white;
+            font-size: 25px;
+            font-family: arial black, bold;
+            letter-spacing: -1px;
+            display: inline-block;
+         }
+
+         .button:hover {
+            border: dashed white 3px;
+            padding: 10px 100px;
+         }
+
+         #top, #bottom {
+             background-image: url(../W/Wbgg.jpg);
+             background-color: #EC4153;
+             background-repeat: no-repeat;
+             background-position: right top;
+             margin-top: 10px;
+             padding: 35px;
+             background-size: 250px 140px;
+         }
+
+         #bottom {
+             background-position: right bottom;
+             margin-top: 32%;
+         }
+
+         #top {
+             margin-bottom: -1px;
+         }
+        </style>
+    </head>
+        <body>
+        <br><br>
+        <div id = "title">
+        <div id = "bloc1">deadmau5</div> <div id = "bloc2">W:/2016ALBUM/</div>
+        </div><br>
+        <div id="demo"></div>
+        <div id="text"></div>
+
+        <script>
+        let songs = [
+            {
+                name: "4ware <br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/ba/22/5c/ba225cb3-b616-92fe-396d-ec95f9620e3b/mzaf_3405541172277215446.plus.aac.p.m4a"
+            },
+
+            {
+                name: "2448 <br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/1e/e4/d7/1ee4d770-5d59-ea77-1fa4-eb9352923ff4/mzaf_494091167658856236.plus.aac.p.m4a"
+            },
+
+            {
+               name: "cat thruster <br>",
+               preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview19/v4/ee/99/6f/ee996f52-fe7d-9741-3079-bc32cf78e025/mzaf_9054160003800242410.plus.aac.p.m4a"
+            },
+
+            {
+                name: "deus ex machina <br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/33/71/ce/3371cef5-7885-f322-d716-9728d8694833/mzaf_3314155534857832450.plus.aac.p.m4a"
+            },
+
+            {
+                name: "glish<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/d0/56/c7/d056c77f-422f-e55f-bd62-75c6fd96a70b/mzaf_6805338547941252845.plus.aac.p.m4a"
+            },
+
+            {
+                name: "imaginary friends<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/7c/ee/bb/7ceebb32-eff7-031b-0f55-b9ba6178c6de/mzaf_6249394733623323983.plus.aac.p.m4a"
+            },
+
+            {
+                name: "let go<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/83/64/80/836480e7-ac2a-5de4-1e31-af6d1d447029/mzaf_2503835036940616902.plus.aac.p.m4a"
+            },
+
+            {
+                name: "no problem<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/e7/0c/82/e70c82ac-b8da-baf0-5da1-a1dfbbce8454/mzaf_3976218033258323848.plus.aac.p.m4a"
+            },
+
+            {
+                name: "snowcone<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/66/2e/7f/662e7f7a-e159-3c00-710d-b36781807323/mzaf_2111152373599221653.plus.aac.p.m4a"
+            },
+
+            {
+                name: "three pound chicken wing <br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/7d/1c/1a/7d1c1a33-37ea-4cec-0d23-98d644bfab9f/mzaf_3927445898503350124.plus.aac.p.m4a"
+            },
+
+            {
+                name: "whelk then<br>",
+                preview:"https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview71/v4/be/cb/a7/becba740-4217-4031-9db5-a8fa36046dbf/mzaf_7322363292792164089.plus.aac.p.m4a"
+
+            }]
+
+        let text = "";
+        let i;
+
+        for(i = 0; i < songs.length; i++) {
+
+             text += "<div class = 'songs'><img alt = 'redmau5' src = '../W/Wbg.png' height = '155px'/><br>" + songs[i].name + "</a><img class='space' src=" + "><audio controls style='width: 200px' style='height: 20px'><source src="+ songs[i].preview +" type= 'audio/mp4'/></audio></div>"
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        <br><br><br>
+
+        <div id = "buttons">
+        <div id = "top"></div>
+
+        <a href="../index.html"><div class = "button"><div class = "wordbutton">main menu</div></div></a>
+        <a href="https://itunes.apple.com/us/album/w-2016album/1177683751"><div class = "button"><div class = "wordbutton">itunes</div></div></a>
+        <a href="http://live.deadmau5.com"><div class = "button"><div class = "wordbutton">website</div></div></a>
+        </div>
+        <div id = "bottom"></div>
+        </body>

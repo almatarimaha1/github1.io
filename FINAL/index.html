@@ -1,0 +1,144 @@
+<!DOCTYPE.html>
+
+<html>
+    <head>
+        <title>
+             deadmau5 demo
+        </title>
+        <link rel="stylesheet" href="animate.css">
+        <style>
+         @keyframes bgcolor {
+            0% {background-color: #BF3636}
+            25% {background-color: #9A0707}
+            50% {background-color: #672027}
+            75% {background-color: #DC1515}
+            100% {background-color: #F40A22}
+        }
+
+        body {
+
+            /*position: absolute;*/
+            /*white-space: nowrap;*/
+            background: black;
+            width:100%
+        }
+
+        #bigtitle {
+
+            -webkit-animation: bgcolor 20s infinite;
+            animation: bgcolor 10s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+
+            color: white;
+            font-size: 75px;
+            font-family: arial black, bold;
+            padding: 30px 20px;
+            width: 100%;
+            margin: 0px 0px 0px 0px;
+            letter-spacing: -8px;
+            text-align: center;
+            float: center;
+            text-shadow: 3px 5px black;
+            margin: center;
+
+            -webkit-animation-duration: 8s; /*how fast or slow*/
+            -webkit-animation-delay: 0s;   /*how long after page is reloaded*/
+
+        }
+
+        #bloc1, #bloc2 {
+            display:inline;
+        }
+
+        #bloc2 {
+            color: black;
+            font-size: 65px;
+            letter-spacing: -8px;
+            text-shadow: 0px 0px;
+
+        }
+
+        #albums {
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            font-family: arial black, bold;
+            padding: 20px 20px;
+            background-color: #BBB1B1;
+            border: 15px solid black;
+            margin-left: 25%;
+            margin-right: 25%;
+            letter-spacing: -2px;
+            transition: box-shadow 4s;
+            border-color: #2C2626;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: #991313;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: #991313;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #C42020;
+        }
+
+        a:active {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .shadow {
+            transition: box-shadow .4s;
+            display: inline-block;
+
+        }
+        .shadow:hover {
+             box-shadow: 0 0 50px rgba(50,50,50,50);
+        }
+
+
+        #bottom {
+            -webkit-animation: bgcolor 20s infinite;
+            animation: bgcolor 10s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+
+            -webkit-animation-duration: 8s; /*how fast or slow*/
+            -webkit-animation-delay: 0s;   /*how long after page is reloaded*/
+
+            width: 100%;
+            background-color: black;
+            margin: 0px 0px 0px 0px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+
+
+        </style>
+    </head>
+    <body>
+
+        <div id= "bigtitle">
+        <div id = "bloc1"><img alt="blackmau5" src="blackmau5.png" width="150"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deadmau5</div><div id = "bloc2">demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="blackmau5" src="blackmau5.png" width="150"/></div>
+        </div>
+
+        <br><br>
+
+        <div id = "albums">
+
+        <a href="RandomAlbumTitle.html"><p>Random Album Title (2008)</p><div class = "shadow"><img alt ="Random" src = "Random.jpg" width = "150"></a></div>
+        <br><br>
+        <div class = "link"><a href="ForLack.html"><p>For Lack of a Better Name (2009)</p></div><div class = "shadow"><img alt ="Lack" src = "Lack.jpg" width = "150"></a></div>
+
+        </div>
+        <div id= "bottom"></div>
+    </body>
+
